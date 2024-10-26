@@ -2,7 +2,8 @@
   "name": "ifj24-syntax-higlighting",
   "displayName": "IFJ24 Syntax Higlighting",
   "description": "Syntax higlighting for ifj24 language",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "matejkrenek",
   "engines": {
     "vscode": "^1.94.0"
   },
@@ -10,16 +11,38 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "ifj24",
-      "aliases": ["ifj24", "IFJ24"],
-      "extensions": ["ifj24", "ifj"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "ifj24",
-      "scopeName": "source.ifj24",
-      "path": "./syntaxes/ifj24.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "ifj24",
+        "aliases": [
+          "ifj24",
+          "IFJ24"
+        ],
+        "extensions": [
+          "ifj24",
+          "ifj"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ifj24",
+        "scopeName": "source.ifj24",
+        "path": "./syntaxes/ifj24.tmLanguage.json"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onLanguage:ifj"
+  ],
+  "main": "./extension.js",
+  "scripts": {
+    "vscode:prepublish": "node ./extension.js",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matejkrenek/ifj24-syntax-higlighting"
   }
 }
