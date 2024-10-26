@@ -2,7 +2,7 @@
   "name": "ifj24-syntax-higlighting",
   "displayName": "IFJ24 Syntax Higlighting",
   "description": "Syntax higlighting for ifj24 language",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "matejkrenek",
   "engines": {
     "vscode": "^1.94.0"
@@ -22,6 +22,10 @@
           "ifj24",
           "ifj"
         ],
+        "icon": {
+          "light": "./icons/ifj-icon.png", 
+          "dark": "./icons/ifj-icon.png"
+        },
         "configuration": "./language-configuration.json"
       }
     ],
