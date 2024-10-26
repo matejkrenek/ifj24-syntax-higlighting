@@ -1,0 +1,25 @@
+{
+  "name": "ifj24-syntax-higlighting",
+  "displayName": "IFJ24 Syntax Higlighting",
+  "description": "Syntax higlighting for ifj24 language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ifj24",
+      "aliases": ["ifj24", "IFJ24"],
+      "extensions": ["ifj24", "ifj"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ifj24",
+      "scopeName": "source.ifj24",
+      "path": "./syntaxes/ifj24.tmLanguage.json"
+    }]
+  }
+}
